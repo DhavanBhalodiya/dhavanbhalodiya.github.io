@@ -11,7 +11,11 @@ class DashBoardPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.bgColor,
       body: Column(
-        children: [topHeader(), footer()],
+        children: [
+          topHeader(),
+          const Spacer(),
+          footer(),
+        ],
       ),
     );
   }
