@@ -1,5 +1,7 @@
+import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/utils/constant.dart';
 import '../theme/theme.dart';
 import '../utils/utils.dart';
 
@@ -31,7 +33,9 @@ Widget topHeader() {
         const SizedBox(width: 20),
         Text("Skills", style: textStyle),
         const SizedBox(width: 20),
-        Text("Blog", style: textStyle),
+        GestureDetector(
+            child: Text("Blog", style: textStyle),
+            onTap: () => openUrlInNewTab(blogUrl)),
         const SizedBox(width: 20),
         ElevatedButton(
             onPressed: () => {},
@@ -43,4 +47,8 @@ Widget topHeader() {
       ],
     ),
   );
+}
+
+void openUrlInNewTab(String url) {
+  window.open(url, '_blank');
 }
