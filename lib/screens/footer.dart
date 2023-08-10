@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/theme/theme.dart';
 import 'package:portfolio/utils/utils.dart';
 
@@ -11,8 +10,7 @@ Widget footer() {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("Copyright (c) 2023 Dhavan B. All rights Reserved",
-            style: GoogleFonts.abel(
-                textStyle: textStyle.copyWith(color: AppColors.kCaptionColor))),
+            style: textStyle.copyWith(color: AppColors.kCaptionColor)),
       ],
     ),
   );
